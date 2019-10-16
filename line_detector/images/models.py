@@ -10,7 +10,7 @@ from django.db.models.signals import post_save
 class Image(models.Model):
     image = models.ImageField(upload_to="lines/")
     title = models.CharField(max_length=255, null=True, blank=True)
-    options = JSONField()
+    options = JSONField(null=True, blank=True)
     scale = models.PositiveIntegerField(default=0)
 
     def __str__(self):
