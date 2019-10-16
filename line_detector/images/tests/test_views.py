@@ -1,13 +1,14 @@
 import pytest
+from django.core.files.uploadedfile import SimpleUploadedFile
 from django.urls import reverse
-from .factories import ImageFactory
 
+from .factories import ImageFactory
+from .helpers import create_image
 
 pytestmark = pytest.mark.django_db
 
 
 class TestImage:
-
     def test_list(self, client):
         ImageFactory.create_batch(3)
         url = reverse("images:list")
@@ -26,10 +27,9 @@ class TestImage:
 
         assert response.status_code == 200
 
-        data = {
-            "title": "hello world",
-            "scale": 1010
-        }
+        image = create_image(None, "line.png")
+        image = SimpleUploadedFile("line.png", image.getvalue())
+        data = {"title": "hello world", "scale": 1010, "image": image, "options": "[]"}
 
         response = client.post(url, data)
         assert response.status_code == 302
