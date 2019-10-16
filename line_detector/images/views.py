@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, ListView
 
 from .models import Image
 
@@ -26,6 +27,7 @@ class ImageCreateView(CreateView):
     model = Image
     template_name = "images/create.html"
     fields = "__all__"
+    success_url = reverse_lazy("images:list")
 
 
 image_create_view = ImageCreateView.as_view()

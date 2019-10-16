@@ -33,7 +33,7 @@
             {% for image in object_list %}
             <tr>
               <td>{{ image.title }}</td>
-              <td>{{ image.image }}</td>
+              <td><img src="{{ image.image.url }}" class="img-thumbnail img-fluid" width="100" height="100" alt="{{image.image.url}}"></td>
               <td>{{ image.options }}</td>
               <td>{{ image.scale }}</td>
               <td>Detail</td>
