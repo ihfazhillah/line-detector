@@ -2,6 +2,7 @@
 // Setup
 ////////////////////////////////
 
+
 // Gulp and package
 const { src, dest, parallel, series, watch } = require('gulp')
 const pjson = require('./package.json')
@@ -22,6 +23,8 @@ const rename = require('gulp-rename')
 const sass = require('gulp-sass')
 const spawn = require('child_process').spawn
 const uglify = require('gulp-uglify-es').default
+
+
 
 // Relative paths function
 function pathsConfig(appName) {
@@ -46,6 +49,7 @@ function pathsConfig(appName) {
     js: `${this.app}/static/js`,
   }
 }
+
 
 var paths = pathsConfig()
 
@@ -90,6 +94,29 @@ function scripts() {
     .pipe(dest(paths.js))
 }
 
+
+// JavaScript Tasks
+function mdb(){
+
+  function getJSModules() {
+    delete require.cache[require.resolve(paths.js + '/mdb/modules.js')];
+    return require(paths.js + '/mdb/modules');
+  }
+
+  const plugins = getJSModules()
+  const modules = plugins.modules.map((i) => 
+    paths.js + "/mdb/" + i
+  );
+  plugins.modules = modules;
+
+
+  return src(plugins.modules)
+    .pipe(concat('mdb.js'))
+    .pipe(plumber()) // Checks for errors
+    .pipe(uglify()) // Minifies the js
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(paths.js));
+}
 
 // Vendor Javascript minification
 function vendorScripts() {
@@ -155,6 +182,7 @@ function watchPaths() {
 const generateAssets = parallel(
   styles,
   scripts,
+  mdb,
   vendorScripts,
   imgCompression
 )
