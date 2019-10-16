@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static crispy_forms_tags %}
+
+{% block title %} Create Image {% endblock %}
+{% block content %}
+    <div class="card wow fadeIn">
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col">
+            <form action="" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form | crispy }}
+
+              <div class="form-group">
+                <input class="form-control" type="submit" value="Post">
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+  </div>
+</div>
+{% endblock content %}
+
+{% block extra_javascript %}
+{% endblock %}
