@@ -1,8 +1,7 @@
-from django.db import models
 from django.contrib.postgres.fields import JSONField
-
+from django.db import models
 from django.db.models.signals import post_save
-
+from django.urls import reverse
 
 # Create your models here.
 
@@ -15,6 +14,9 @@ class Image(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("images:detail", args=[self.id])
 
 
 def after_post_image(sender, instance, created, **kwargs):
