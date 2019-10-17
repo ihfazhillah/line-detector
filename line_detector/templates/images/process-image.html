@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static crispy_forms_tags %}
+
+{% block title %} Process Image {% endblock %}
+{% block content %}
+<div class="card wow fadeIn">
+  <div class="card-body">
+    <div class="row" style="margin-bottom:10px;">
+      <div class="col">
+        <a href="{% url 'images:list' %}" ><i class="fas fa-long-arrow-alt-left"></i> List</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <div class="card-header">
+            <h4>Original</h4>
+          </div>
+          <div class="card-body">
+            <img src="{{ object.image.url }}" class="img-fluid" alt="">
+
+            <table class="table table-stripped">
+              <tr>
+                <td>Title</td>
+                <td>{{ object.tiltle }}</td>
+              </tr>
+              <tr>
+                <td>Scale</td>
+                <td>1:{{ object.scale }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-5">x</div>
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <h4>Result</h4>
+          </div>
+          <div class="card-body">
+            <img src="{{ object.image.url }}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block extra_javascript %}
+{% endblock %}

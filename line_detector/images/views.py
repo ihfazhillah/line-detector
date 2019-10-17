@@ -31,3 +31,11 @@ class ImageCreateView(CreateView):
 
 
 image_create_view = ImageCreateView.as_view()
+
+
+class ImageProcessViewGet(DetailView):
+    model = Image
+    template_name = "images/process-image.html"
+
+
+image_process_view_get = ImageProcessViewGet.as_view()
