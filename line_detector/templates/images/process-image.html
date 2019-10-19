@@ -3,7 +3,7 @@
 
 {% block title %} Process Image {% endblock %}
 {% block content %}
-<div class="card wow fadeIn">
+<div id="process" class="card wow fadeIn">
   <div class="card-body">
     <div class="row" style="margin-bottom:10px;">
       <div class="col">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-3">
+      <div class="col-4">
         <div class="card">
           <div class="card-header">
             <h4>Original</h4>
@@ -33,14 +33,17 @@
         </div>
 
       </div>
-      <div class="col-5">x</div>
-      <div class="col-4">
+      <div class="col-8">
+        <button class="btn btn-primary" v-on:click="processClick()">Process</button>
+      </div>
+      <div class="col">
         <div class="card">
           <div class="card-header">
             <h4>Result</h4>
           </div>
           <div class="card-body">
-            <img src="{{ object.image.url }}" class="img-fluid" alt="">
+            <!-- <img src="{{ object.image.url }}" class="img-fluid" alt=""> -->
+            <canvas id="canvas" height=100, width=100></canvas>
           </div>
         </div>
       </div>
@@ -52,4 +55,34 @@
 {% endblock content %}
 
 {% block extra_javascript %}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+  var app = new Vue({
+    el: "#process",
+    methods: {
+      processClick: function(){
+        var url = "{% url 'images:process-post' object.id %}";
+        axios.post(url).
+          then(({data}) => {
+            var canvas = $("#canvas")[0];
+            canvas.height = data.shape.height;
+            canvas.width = data.shape.width;
+            var context = canvas.getContext("2d");
+
+            data.lines.forEach((item, index) => {
+              var [x1, y1, x2, y2] = item[0];
+              context.beginPath()
+              context.moveTo(x1, y1)
+              context.lineTo(x2, y2)
+              context.stroke()
+            })
+
+          })
+      }
+    }
+  })
+</script>
+
 {% endblock %}
