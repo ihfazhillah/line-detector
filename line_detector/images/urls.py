@@ -9,6 +9,11 @@ urlpatterns = [
     path("create/", view=views.image_create_view, name="create"),
     path("<pk>/", view=views.image_detail_view, name="detail"),
     path(
+        "<pk>/get-lines/",
+        view=views.image_process_view_post,
+        name="process-post",
+    ),
+    path(
         "<pk>/process/",
         view=views.image_process_view_get,
         name="process-get",

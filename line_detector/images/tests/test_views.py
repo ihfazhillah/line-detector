@@ -39,3 +39,9 @@ class TestImage:
         url = reverse("images:process-get", args=[image.id])
         response = client.get(url)
         assert response.status_code == 200
+
+    def test_image_process_post(self, client):
+        image = ImageFactory()
+        url = reverse("images:process-post", args=[image.id])
+        response = client.post(url)
+        assert response.status_code == 200
