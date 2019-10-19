@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DetailView, ListView
@@ -6,6 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from .models import Image
+from line_detector.detector import line_detector
 
 # Create your views here.
 
@@ -45,5 +46,7 @@ image_process_view_get = ImageProcessViewGet.as_view()
 
 
 @api_view(["POST"])
-def image_process_view_post(request, *args, **kwargs):
-    return Response({})
+def image_process_view_post(request, pk, *args, **kwargs):
+    image = get_object_or_404(Image, pk=pk)
+    detected = line_detector(image.image.path)
+    return Response(detected)

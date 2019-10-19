@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 
 
-def line_detector(image, options):
+def line_detector(image, options=None):
     origin = cv.imread(image)
     img = cv.cvtColor(origin, cv.COLOR_BGR2GRAY)
     img = cv.GaussianBlur(img, (3, 3), 0)
