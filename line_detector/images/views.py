@@ -30,8 +30,12 @@ image_detail_view = ImageDetailView.as_view()
 class ImageCreateView(CreateView):
     model = Image
     template_name = "images/create.html"
-    fields = "__all__"
+    fields = ["title", "image", "scale"]
     success_url = reverse_lazy("images:list")
+
+    def form_valid(self, form):
+        form.options = []
+        return super().form_valid(form)
 
 
 image_create_view = ImageCreateView.as_view()
