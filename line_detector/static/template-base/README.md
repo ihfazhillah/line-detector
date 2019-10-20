@@ -1,12 +1,12 @@
 [![Material Design for Bootstrap](https://mdbootstrap.com/wp-content/uploads/2018/03/admin.jpg)](https://mdbootstrap.com/freebies/jquery/admin-dashboard/)
 
-# Bootstrap 4 & Material Design - Admin Template 
+# Bootstrap 4 & Material Design - Admin Template
 
 Free, responsive Admin Dashboard template containing different styles of dashboards, data presentations, and numerous insightful components. Built with the newest Bootstrap 4 and Material Design. MIT license – free for personal and commercial use.
 
 ________
 
-# Live Previews: 
+# Live Previews:
 ## https://mdbootstrap.com/freebies/jquery/admin-dashboard/
 
 # Most important features:
@@ -25,7 +25,7 @@ ________
 
 7. Detailed documentation
 
-# Demo:  
+# Demo:
 **Main demo**: https://mdbootstrap.com/previews/free-templates/admin/dashboard.html
 
 # MDB Quick Start (5 minutes):
@@ -51,63 +51,63 @@ You can install MDBootstrap using NPM:
 
 **MDB Admin Template Pro (jQuery version)**: https://mdbootstrap.com/products/jquery-admin-dashboard/
 
-# Highlights:  
-**Bootstrap 4**  
+# Highlights:
+**Bootstrap 4**
 Thanks to MDB you can take advantage of all feature of newest Bootstrap 4.
 
-**Material Design for Bootstrap**  
-This template is built with MDBootstrap - powerful and free UI Kit, containing 400+ material UI elements, 600+ material icons, 74 CSS animations, SASS files, templates, tutorials and many more.  
+**Material Design for Bootstrap**
+This template is built with MDBootstrap - powerful and free UI Kit, containing 400+ material UI elements, 600+ material icons, 74 CSS animations, SASS files, templates, tutorials and many more.
 
-**Free for personal and commercial use**  
-Our license is user-friendly. Feel free to use MDB for both private as well as commercial projects.   
+**Free for personal and commercial use**
+Our license is user-friendly. Feel free to use MDB for both private as well as commercial projects.
 
-**10 fresh ready to use templates**  
-We are going further and giving to you ready to use templates! Use them as you like, as an inspiration, prototype or final product for your customers.  
+**10 fresh ready to use templates**
+We are going further and giving to you ready to use templates! Use them as you like, as an inspiration, prototype or final product for your customers.
 
-**Fully responsive**  
+**Fully responsive**
 It doesn't matter whether your project will be displayed on desktop, laptop, tablet or mobile phone. MDB looks great on each screen.
 
-**Technical support**  
-We really care about reliability. If you have any questions - do not hesitate to contact us.  
+**Technical support**
+We really care about reliability. If you have any questions - do not hesitate to contact us.
 
-**Active community**  
-Our society grows day by day. Visit **our forum** and check how it is to be a part of our family.  
+**Active community**
+Our society grows day by day. Visit **our forum** and check how it is to be a part of our family.
 
-**Flex box**  
-MDB fully suppports Flex Box. You can forget about alignment issues.  
+**Flex box**
+MDB fully suppports Flex Box. You can forget about alignment issues.
 
-**Latest jQuery**  
-MDB is integrated with newest jQuery, therefore you can use all the newest features which comes along with it.  
+**Latest jQuery**
+MDB is integrated with newest jQuery, therefore you can use all the newest features which comes along with it.
 
-**Detailed documentation:**  
-We give you detailed documentation at your disposal. It will help you to implement your ideas easily.  
+**Detailed documentation:**
+We give you detailed documentation at your disposal. It will help you to implement your ideas easily.
 
-A big **thank you to all our users** who are working with us to improve the software. We wouldn't be where we are without you.  
+A big **thank you to all our users** who are working with us to improve the software. We wouldn't be where we are without you.
 
-# Useful Links:  
+# Useful Links:
 
-Getting started: https://mdbootstrap.com/docs/jquery/getting-started/download/  
+Getting started: https://mdbootstrap.com/docs/jquery/getting-started/download/
 
-5 min quick start: https://mdbootstrap.com/education/bootstrap/quick-start/  
+5 min quick start: https://mdbootstrap.com/education/bootstrap/quick-start/
 
-Material Design + Bootstrap Tutorial: https://mdbootstrap.com/education/bootstrap/  
+Material Design + Bootstrap Tutorial: https://mdbootstrap.com/education/bootstrap/
 
-Material Design + WordPress Tutorial: https://mdbootstrap.com/education/wordpress/  
+Material Design + WordPress Tutorial: https://mdbootstrap.com/education/wordpress/
 
-Other Freebies: https://mdbootstrap.com/freebies/  
+Other Freebies: https://mdbootstrap.com/freebies/
 
-Premium Templates: https://mdbootstrap.com/templates/  
+Premium Templates: https://mdbootstrap.com/templates/
 
 
-# Social Media:  
+# Social Media:
 
-Twitter: https://twitter.com/MDBootstrap  
+Twitter: https://twitter.com/MDBootstrap
 
-Facebook: https://www.facebook.com/mdbootstrap  
+Facebook: https://www.facebook.com/mdbootstrap
 
-Pinterest: https://pl.pinterest.com/mdbootstrap 
+Pinterest: https://pl.pinterest.com/mdbootstrap
 
-Google+: https://plus.google.com/u/0/b/107863090883699620484/+Mdbootstrap/posts  
+Google+: https://plus.google.com/u/0/b/107863090883699620484/+Mdbootstrap/posts
 
 Dribbble: https://dribbble.com/mdbootstrap
 

@@ -8,18 +8,30 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Image',
+            name="Image",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='lines/')),
-                ('title', models.CharField(blank=True, max_length=255, null=True)),
-                ('options', django.contrib.postgres.fields.jsonb.JSONField(blank=True, null=True)),
-                ('scale', models.PositiveIntegerField(default=0)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="lines/")),
+                ("title", models.CharField(blank=True, max_length=255, null=True)),
+                (
+                    "options",
+                    django.contrib.postgres.fields.jsonb.JSONField(
+                        blank=True, null=True
+                    ),
+                ),
+                ("scale", models.PositiveIntegerField(default=0)),
             ],
-        ),
+        )
     ]

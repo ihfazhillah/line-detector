@@ -4,7 +4,9 @@ from django.utils.six import BytesIO
 
 
 # "borrowed" from easy_thumbnails/tests/test_processors.py
-def create_image(storage, filename, size=(100, 100), image_mode='RGB', image_format='PNG'):
+def create_image(
+    storage, filename, size=(100, 100), image_mode="RGB", image_format="PNG"
+):
     """
     Generate a test image, returning the filename that it was saved as.
 
@@ -18,4 +20,3 @@ def create_image(storage, filename, size=(100, 100), image_mode='RGB', image_for
         return data
     image_file = ContentFile(data.read())
     return storage.save(filename, image_file)
-
